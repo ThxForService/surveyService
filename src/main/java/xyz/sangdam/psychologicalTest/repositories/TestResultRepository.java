@@ -1,4 +1,4 @@
 package xyz.sangdam.psychologicalTest.repositories;
 
-public class TestResultRepository {
+public interface TestResultRepository {
 }
