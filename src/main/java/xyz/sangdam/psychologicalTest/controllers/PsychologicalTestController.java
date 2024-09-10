@@ -1,6 +1,7 @@
 package xyz.sangdam.psychologicalTest.controllers;
 
 import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
@@ -25,6 +26,7 @@ public class PsychologicalTestController {
 
     @Operation(summary = "심리검사 문항 조회", method = "GET")
     @ApiResponse(responseCode = "200", description = "검사 문항 조회")
+    @Parameter(name="testType", required = true, description = "경로변수, 심리검사 종류(testType)", example = "stress")
     @GetMapping("/{testType}")
     public ResponseEntity<JSONData> getTestItems(@PathVariable("testType") PsychologicalTestType testType) {
         switch (testType) {
@@ -48,4 +50,6 @@ public class PsychologicalTestController {
         }
         return ResponseEntity.ok(null); // 테스트 문항을 반환
     }
+
+
 }
