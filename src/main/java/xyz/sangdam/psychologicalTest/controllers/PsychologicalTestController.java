@@ -7,7 +7,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import xyz.sangdam.global.rests.JSONData;
-import xyz.sangdam.psychologicalTest.enums.PsychologicalTestType;
+import xyz.sangdam.psychologicalTest.constants.PsychologicalTestType;
 
 @Tag(name = "PsychologicalTest", description = "심리검사 API")
 @RestController
@@ -19,11 +19,12 @@ public class PsychologicalTestController {
     @ApiResponse(responseCode = "200", description = "심리검사 목록 조회")
     @GetMapping("/list")
     public JSONData getTestList() {
+
         return null;
     }
 
     @Operation(summary = "심리검사 문항 조회", method = "GET")
-    @ApiResponse(responseCode = "200", description = "선택한 {testType}의 검사 문항 조회")
+    @ApiResponse(responseCode = "200", description = "검사 문항 조회")
     @GetMapping("/{testType}")
     public ResponseEntity<JSONData> getTestItems(@PathVariable("testType") PsychologicalTestType testType) {
         switch (testType) {
@@ -45,6 +46,6 @@ public class PsychologicalTestController {
             default:
                 return ResponseEntity.badRequest().body(null);
         }
-        return ResponseEntity.ok(null); // 테스트 문항 반환
+        return ResponseEntity.ok(null); // 테스트 문항을 반환
     }
 }
