@@ -2,7 +2,6 @@ package xyz.sangdam.psychologicalTest.entities;
 
 import jakarta.persistence.*;
 import lombok.Data;
-import xyz.sangdam.global.entities.BaseEntity;
 import xyz.sangdam.psychologicalTest.constants.PsychologicalTestType;
 
 import java.time.LocalDateTime;
@@ -26,4 +25,7 @@ public class TestResult {
     @Enumerated(EnumType.STRING)
     @Column(length=30)
     private PsychologicalTestType testType;
+
+    @Lob
+    private String resultDescription; // 결과에 대한 설명
 }
