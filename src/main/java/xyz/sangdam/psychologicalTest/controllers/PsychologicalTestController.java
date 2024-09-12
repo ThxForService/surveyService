@@ -51,5 +51,20 @@ public class PsychologicalTestController {
         return ResponseEntity.ok(null); // 테스트 문항을 반환
     }
 
+    @Operation(summary = "심리검사 답변 저장", method = "POST")
+    @ApiResponse(responseCode = "201", description = "답변 저장 성공")
+    @ApiResponse(responseCode = "400", description = "잘못된 요청")
+    @Parameter(name = "testType", required = true, description = "경로변수, 심리검사 종류(testType)", example = "stress")
+    @PostMapping("/{testType}")
+    public ResponseEntity<JSONData> saveTestAnswers(
+            @PathVariable("testType") PsychologicalTestType testType) {
+    }
 
+    @Operation(summary = "심리검사 결과 조회", method = "GET")
+    @ApiResponse(responseCode = "200", description = "결과 조회 성공")
+    @ApiResponse(responseCode = "404", description = "결과를 찾을 수 없음")
+    @Parameter(name = "testType", required = true, description = "경로변수, 심리검사 종류(testType)", example = "stress")
+    @GetMapping("/{testType}/result")
+    
 }
+
