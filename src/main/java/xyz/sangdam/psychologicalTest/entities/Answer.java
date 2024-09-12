@@ -8,7 +8,7 @@ import java.time.LocalDateTime;
 
 @Data
 @Entity
-public class TestResult {
+public class Answer {
 
     @Id
     @Column(length = 10)

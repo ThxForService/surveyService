@@ -6,7 +6,7 @@ import xyz.sangdam.psychologicalTest.constants.PsychologicalTestType;
 
 @Data
 @Entity
-public class TestQuestion {
+public class Question {
     @Id
     @Column(length = 10)
     private Long questionId; // 문항 번호

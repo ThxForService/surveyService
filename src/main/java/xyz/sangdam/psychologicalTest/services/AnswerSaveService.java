@@ -6,7 +6,7 @@ import xyz.sangdam.psychologicalTest.controllers.RequestAnswer;
 
 @Service
 @RequiredArgsConstructor
-public class ResultSaveService {
+public class AnswerSaveService {
 
     public void save(RequestAnswer form) {
 
