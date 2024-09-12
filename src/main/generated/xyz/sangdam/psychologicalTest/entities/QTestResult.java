@@ -44,4 +44,3 @@ public class QTestResult extends EntityPathBase<TestResult> {
     }
 
 }
-

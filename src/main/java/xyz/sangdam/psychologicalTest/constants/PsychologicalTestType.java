@@ -1,6 +1,7 @@
 package xyz.sangdam.psychologicalTest.constants;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 // 심리검사 종류
@@ -173,6 +174,14 @@ public enum PsychologicalTestType {
 
     public String getTitle() {
         return title;
+    }
+
+    public static List<String[]> getList() {
+        return List.of(new String[] {COMPULSION.name(), COMPULSION.title},
+                new String[] {EVASION.name(), EVASION.title},
+                new String[] { STRESS.name(), STRESS.title },
+                new String[] { INTERNET_ADDICTION.name(), INTERNET_ADDICTION.title},
+                new String[] { EATING_DISORDER.name(), EATING_DISORDER.title });
     }
 
     public abstract Map<String, String> getResult(long score);

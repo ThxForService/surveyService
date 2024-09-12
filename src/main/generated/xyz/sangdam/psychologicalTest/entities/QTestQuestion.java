@@ -38,4 +38,3 @@ public class QTestQuestion extends EntityPathBase<TestQuestion> {
     }
 
 }
-
