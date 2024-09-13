@@ -11,13 +11,16 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.*;
 import xyz.sangdam.global.CommonSearch;
+import xyz.sangdam.global.ListData;
 import xyz.sangdam.global.Utils;
 import xyz.sangdam.global.exceptions.BadRequestException;
 import xyz.sangdam.global.rests.JSONData;
 import xyz.sangdam.psychologicalTest.constants.PsychologicalTestType;
+import xyz.sangdam.psychologicalTest.entities.Answer;
 import xyz.sangdam.psychologicalTest.entities.Question;
 import xyz.sangdam.psychologicalTest.services.AnswerSaveService;
 import xyz.sangdam.psychologicalTest.services.QuestionService;
+import xyz.sangdam.psychologicalTest.services.ResultInfoService;
 
 import java.util.List;
 
@@ -29,6 +32,7 @@ public class PsychologicalTestController {
 
     private final QuestionService questionService;
     private final AnswerSaveService saveService;
+    private final ResultInfoService infoService;
     private final Utils utils;
 
     @Operation(summary = "자가진단 심리검사 목록 조회", method = "GET")
@@ -67,11 +71,12 @@ public class PsychologicalTestController {
     }
 
 
-    @Operation(summary = "심리검사 테스트 결과 목록")
+    @Operation(summary = "심리검사 테스트 결과 목록", method = "GET")
+    @ApiResponse(responseCode = "200", description = "검사 결과 목록 조회")
     @GetMapping("/answers")
-    public JSONData testAnswers(CommonSearch search) {
-
-        return null;
+    public JSONData Answers() {
+        ListData<Answer> results = infoService.getList();
+        return new JSONData(results);
     }
 
     @Operation(summary = "심리검사 테스트 결과 조회", method = "GET")
@@ -79,7 +84,7 @@ public class PsychologicalTestController {
     @ApiResponse(responseCode = "404", description = "검사 결과 찾을 수 없음")
     @Parameter(name = "resultId", required = true, description = "경로변수, 검사결과 일련번호(resultId)", example = "1234")
     @GetMapping("/answer/{resultId}")
-    public JSONData testAnswer(@PathVariable("resultId") Long resultId) {
+    public JSONData Answer(@PathVariable("resultId") Long resultId) {
 
         return null;
     }
