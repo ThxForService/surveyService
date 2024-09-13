@@ -22,21 +22,6 @@ public class MemberUtil {
         return isLogin() && getMember() instanceof Student;
     }
 
-    public boolean isAdmin() {
-        Member member = getMember();
-        return isLogin() && member instanceof Employee && member.getUserType() == UserType.ADMIN;
-    }
-
-    public boolean isProfessor() {
-        Member member = getMember();
-        return isLogin() && member instanceof Employee && member.getUserType() == UserType.PROFESSOR;
-    }
-
-    public boolean isCounselor() {
-        Member member = getMember();
-        return isLogin() && member instanceof Employee && member.getUserType() == UserType.COUNSELOR;
-    }
-
     public <T extends Member> T getMember() {
 
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();

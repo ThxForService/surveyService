@@ -1,6 +1,7 @@
 package xyz.sangdam.psychologicalTest.entities;
 
 import jakarta.persistence.*;
+import lombok.Builder;
 import lombok.Data;
 import xyz.sangdam.psychologicalTest.constants.PsychologicalTestType;
 
@@ -8,6 +9,7 @@ import java.time.LocalDateTime;
 
 @Data
 @Entity
+@Builder
 public class Answer {
 
     @Id
