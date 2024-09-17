@@ -65,7 +65,11 @@ public class PsychologicalTestController {
             throw new BadRequestException(utils.getErrorMessages(errors));
         }
 
-        saveService.save(answer);
+        try {
+            saveService.save(answer);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
 
         return ResponseEntity.status(HttpStatus.CREATED).build();
     }

@@ -1,10 +1,10 @@
 package xyz.sangdam.psychologicalTest.services;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import xyz.sangdam.psychologicalTest.controllers.RequestAnswer;
 import xyz.sangdam.psychologicalTest.entities.Answer;
-import xyz.sangdam.psychologicalTest.entities.Question;
 
 import java.util.Map;
 
@@ -12,13 +12,19 @@ import java.util.Map;
 @RequiredArgsConstructor
 public class AnswerSaveService {
 
-    public void save(RequestAnswer form) {
+    private final ObjectMapper om;
+
+    public void save(RequestAnswer form) throws Exception {
 
         Map<Long, Integer> test = form.getAnswers();
-        Answer answer = Answer.builder()
-                .questionAndAnswer(test.toString())
-                .build();
 
+        String answerData = om.writeValueAsString(test);
+
+        // System.out.println("JSON Data: " + answerData);
+
+        Answer answer = Answer.builder()
+                .questionAndAnswer(answerData)
+                .build();
     }
 
 }
