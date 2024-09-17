@@ -25,7 +25,7 @@ public class ResultInfoService {
 
     public ListData<Answer> getList() {
         Student student = memberUtil.getMember();
-        ListData<Answer> results = answerRepository.findByStudentId(student.getStdntNo());
+        ListData<Answer> results = answerRepository.findByStudentNo(student.getStdntNo());
         return results;
     }
 }

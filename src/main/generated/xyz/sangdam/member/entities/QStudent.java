@@ -39,6 +39,9 @@ public class QStudent extends EntityPathBase<Student> {
     public final DateTimePath<java.time.LocalDateTime> modifiedAt = _super.modifiedAt;
 
     //inherited
+    public final StringPath password = _super.password;
+
+    //inherited
     public final NumberPath<Long> seq = _super.seq;
 
     public final StringPath stdntNo = createString("stdntNo");

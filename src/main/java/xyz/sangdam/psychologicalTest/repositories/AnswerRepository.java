@@ -7,7 +7,7 @@ import xyz.sangdam.psychologicalTest.entities.Answer;
 
 import java.util.List;
 
-public interface AnswerRepository extends JpaRepository<AnswerRepository, Long>, QuerydslPredicateExecutor<Answer> {
+public interface AnswerRepository extends JpaRepository<Answer, Long>, QuerydslPredicateExecutor<Answer> {
 
-    ListData<Answer> findByStudentId(String studentId);
+    ListData<Answer> findByStudentNo(String studentNo);
 }

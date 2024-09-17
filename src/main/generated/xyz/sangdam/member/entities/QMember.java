@@ -34,6 +34,8 @@ public class QMember extends EntityPathBase<Member> {
     //inherited
     public final DateTimePath<java.time.LocalDateTime> modifiedAt = _super.modifiedAt;
 
+    public final StringPath password = createString("password");
+
     public final NumberPath<Long> seq = createNumber("seq", Long.class);
 
     public final StringPath userName = createString("userName");

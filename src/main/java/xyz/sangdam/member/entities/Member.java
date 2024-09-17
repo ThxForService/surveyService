@@ -21,6 +21,9 @@ public class Member extends BaseEntity {
     @Column(length=50, unique = true, nullable = false)
     private String email; // 로그인 ID
 
+    @Column(length=200, nullable = false)
+    private String password; // 비밀번호
+
     @Enumerated(EnumType.STRING)
     @Column(length=10, nullable = false)
     private UserType userType; // 사용자 구분
