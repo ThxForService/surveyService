@@ -17,7 +17,7 @@ public class Answer {
     private Long resultId; // 검사 결과 일련번호
 
     @Column(name="stdntNo", length = 10)
-    private Long studentNo; // 학번
+    private String studentNo; // 학번
 
     @Column(length = 10)
     private Long score; // 검사 점수

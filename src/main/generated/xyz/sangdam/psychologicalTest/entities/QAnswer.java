@@ -25,7 +25,7 @@ public class QAnswer extends EntityPathBase<Answer> {
 
     public final NumberPath<Long> score = createNumber("score", Long.class);
 
-    public final NumberPath<Long> studentNo = createNumber("studentNo", Long.class);
+    public final StringPath studentNo = createString("studentNo");
 
     public final DateTimePath<java.time.LocalDateTime> testDate = createDateTime("testDate", java.time.LocalDateTime.class);
 
