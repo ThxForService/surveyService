@@ -25,10 +25,8 @@ public class AnswerSaveService {
     @Transactional
     public void save(RequestAnswer form) throws Exception {
         Map<Long, Integer> test = form.getAnswers();
-        Student student = memberUtil.getMember();
         String answerData = om.writeValueAsString(test);
 
-        // Create Answer object with initial values
         Answer answer = Answer.builder()
                 .questionAndAnswer(answerData)
                 .studentNo(memberUtil.getStudentNo())
