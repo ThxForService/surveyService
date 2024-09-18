@@ -38,7 +38,7 @@ public class PsychologicalTestController {
     @Operation(summary = "자가진단 심리검사 목록 조회", method = "GET")
     @ApiResponse(responseCode = "200", description = "심리검사 목록 조회")
     @GetMapping("/list")
-    public JSONData getTestList() {
+    public JSONData getList() {
         List<String[]> data = PsychologicalTestType.getList();
 
         return new JSONData(data);
@@ -78,8 +78,8 @@ public class PsychologicalTestController {
     @Operation(summary = "심리검사 테스트 결과 목록", method = "GET")
     @ApiResponse(responseCode = "200", description = "검사 결과 목록 조회")
     @GetMapping("/answers")
-    public JSONData Answers() {
-        ListData<Answer> results = infoService.getList();
+    public JSONData Answers(CommonSearch search) {
+        ListData<Answer> results = infoService.getList(search);
         return new JSONData(results);
     }
 
@@ -89,7 +89,8 @@ public class PsychologicalTestController {
     @Parameter(name = "resultId", required = true, description = "경로변수, 검사결과 일련번호(resultId)", example = "1234")
     @GetMapping("/answer/{resultId}")
     public JSONData Answer(@PathVariable("resultId") Long resultId) {
+        Answer answer = infoService.get(resultId);
 
-        return null;
+        return new JSONData(answer);
     }
 }

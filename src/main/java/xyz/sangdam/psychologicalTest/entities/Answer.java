@@ -6,6 +6,7 @@ import lombok.Data;
 import xyz.sangdam.psychologicalTest.constants.PsychologicalTestType;
 
 import java.time.LocalDateTime;
+import java.util.Map;
 
 @Data
 @Entity
@@ -30,4 +31,10 @@ public class Answer {
 
     @Lob
     private String questionAndAnswer; // 질문번호+응답번호(객관식)을 JSON으로 받음
+
+    @Transient
+    private Map<Long, Integer> _questionAndAnswer;
+
+    @Transient
+    private Map<String, String> result;
 }

@@ -1,11 +1,11 @@
 package xyz.sangdam.psychologicalTest.services;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import xyz.sangdam.member.MemberUtil;
-import xyz.sangdam.member.entities.Student;
 import xyz.sangdam.psychologicalTest.constants.PsychologicalTestType;
 import xyz.sangdam.psychologicalTest.controllers.RequestAnswer;
 import xyz.sangdam.psychologicalTest.entities.Answer;
@@ -23,9 +23,15 @@ public class AnswerSaveService {
     private final ObjectMapper om;
 
     @Transactional
-    public void save(RequestAnswer form) throws Exception {
+    public void save(RequestAnswer form)  {
         Map<Long, Integer> test = form.getAnswers();
-        String answerData = om.writeValueAsString(test);
+
+        String answerData = null;
+        try {
+            answerData = om.writeValueAsString(test);
+        } catch (JsonProcessingException e) {
+            throw new RuntimeException(e);
+        }
 
         Answer answer = Answer.builder()
                 .questionAndAnswer(answerData)
@@ -34,13 +40,12 @@ public class AnswerSaveService {
                 .testDate(LocalDateTime.now())
                 .build();
 
-        calculateScore(answer);
+        calculateScore(answer, test);
 
         answerRepository.save(answer);
     }
 
-    public void calculateScore(Answer answer) throws Exception {
-        Map<Long, Integer> questionAnswerMap = om.readValue(answer.getQuestionAndAnswer(), Map.class);
+    public void calculateScore(Answer answer, Map<Long, Integer> questionAnswerMap) {
 
         long totalScore = questionAnswerMap.values().stream().mapToLong(Integer::longValue).sum();
         answer.setScore(totalScore);
