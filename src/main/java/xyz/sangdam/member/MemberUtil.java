@@ -5,6 +5,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Component;
+import xyz.sangdam.member.constants.UserType;
 import xyz.sangdam.member.entities.Member;
 import xyz.sangdam.member.entities.Student;
 
@@ -26,18 +27,18 @@ public class MemberUtil {
 
         if (authentication != null && authentication.isAuthenticated() && authentication.getPrincipal() instanceof MemberInfo memberInfo) {
 
-            return (T)memberInfo.getMember();
+            return (T) memberInfo.getMember();
         }
 
         return null;
     }
 
     public String getStudentNo() {
-        if (isStudent()) {
-            Student student = (Student) getMember();
+        Member member = getMember();
+        if (member instanceof Student) {
+            Student student = (Student) member;
             return student.getStdntNo();
         }
-
         return null;
     }
 }
