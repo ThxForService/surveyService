@@ -11,7 +11,6 @@ import java.time.LocalDate;
 import java.util.UUID;
 
 @Data
-@Entity
 @Table(name="USER_INFO")
 @Inheritance(strategy = InheritanceType.JOINED)
 public class Member extends BaseEntity {

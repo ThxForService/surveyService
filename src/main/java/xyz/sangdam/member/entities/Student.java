@@ -5,7 +5,6 @@ import lombok.Data;
 
 
 @Data
-@Entity
 @Table(name="STDNT_INFO")
 public class Student extends Member {
     @Column(length=10)
