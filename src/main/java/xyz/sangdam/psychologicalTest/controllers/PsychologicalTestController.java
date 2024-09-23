@@ -27,7 +27,7 @@ import java.util.List;
 @Tag(name = "PsychologicalTest", description = "심리검사 API")
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/psychologicalTest")
+@RequestMapping
 public class PsychologicalTestController {
 
     private final QuestionService questionService;
