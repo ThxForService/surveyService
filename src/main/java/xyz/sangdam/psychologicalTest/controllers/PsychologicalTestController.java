@@ -88,7 +88,7 @@ public class PsychologicalTestController {
     @ApiResponse(responseCode = "404", description = "검사 결과 찾을 수 없음")
     @Parameter(name = "resultId", required = true, description = "경로변수, 검사결과 일련번호(resultId)", example = "1234")
     @GetMapping("/answer/{resultId}")
-    public JSONData Answer(@PathVariable("resultId") Long resultId) {
+    public JSONData getAnswer(@PathVariable("resultId") Long resultId) {
         Answer answer = infoService.get(resultId);
 
         return new JSONData(answer);
