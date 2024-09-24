@@ -1,6 +1,6 @@
 spring:
   application:
-    name: psychologicalTest-service
+    name: surveyservice
   cloud:
     config:
       uri: ${configServerUrl}
