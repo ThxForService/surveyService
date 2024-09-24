@@ -58,20 +58,25 @@ public class PsychologicalTestController {
     @ApiResponse(responseCode = "201", description = "답변 저장 성공")
     @ApiResponse(responseCode = "400", description = "잘못된 요청")
     @PostMapping("/answer")
-    public ResponseEntity<Void> saveTestAnswers(
+    public ResponseEntity<JSONData> saveTestAnswers(
             @Valid @RequestBody RequestAnswer answer, Errors errors) {
 
         if (errors.hasErrors()) {
             throw new BadRequestException(utils.getErrorMessages(errors));
         }
 
+        JSONData data = new JSONData();
+        HttpStatus status = HttpStatus.CREATED;
+        data.setStatus(status);
         try {
-            saveService.save(answer);
+            Answer result = saveService.save(answer);
+            data.setData(result);
+            
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
 
-        return ResponseEntity.status(HttpStatus.CREATED).build();
+        return ResponseEntity.status(status).body(data);
     }
 
 
