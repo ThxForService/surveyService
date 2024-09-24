@@ -16,6 +16,7 @@ import xyz.sangdam.global.CommonSearch;
 import xyz.sangdam.global.ListData;
 import xyz.sangdam.global.Pagination;
 import xyz.sangdam.member.MemberUtil;
+import xyz.sangdam.member.entities.Member;
 import xyz.sangdam.member.entities.Student;
 import xyz.sangdam.psychologicalTest.entities.Answer;
 import xyz.sangdam.psychologicalTest.entities.QAnswer;
@@ -36,10 +37,14 @@ public class ResultInfoService {
     private final ObjectMapper om;
 
     public Answer get(Long resultId) {
-        Student student = memberUtil.getMember();
+        Member student = memberUtil.getMember();
 
+        BooleanBuilder builder = new BooleanBuilder();
         QAnswer answer = QAnswer.answer;
-        Answer item = answerRepository.findOne(answer.studentNo.eq(student.getStdntNo()))
+        builder.and(answer.studentNo.eq(student.getStdntNo())
+                        .and(answer.resultId.eq(resultId)));
+
+        Answer item = answerRepository.findOne(builder)
                 .orElseThrow(AnswerNotFoundException::new);
 
         addInfo(item);
@@ -48,7 +53,7 @@ public class ResultInfoService {
     }
 
     public ListData<Answer> getList(CommonSearch search) {
-        Student student = memberUtil.getMember();
+        Member student = memberUtil.getMember();
         int page = Math.max(search.getPage(), 1);
         int limit = search.getLimit();
         limit = limit < 1 ? 10 : limit;

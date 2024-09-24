@@ -71,7 +71,7 @@ public class PsychologicalTestController {
         try {
             Answer result = saveService.save(answer);
             data.setData(result);
-            
+
         } catch (Exception e) {
             throw new RuntimeException(e);
         }

@@ -6,6 +6,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import xyz.sangdam.member.MemberUtil;
+import xyz.sangdam.member.entities.Member;
 import xyz.sangdam.psychologicalTest.constants.PsychologicalTestType;
 import xyz.sangdam.psychologicalTest.controllers.RequestAnswer;
 import xyz.sangdam.psychologicalTest.entities.Answer;
@@ -33,9 +34,11 @@ public class AnswerSaveService {
             throw new RuntimeException(e);
         }
 
+        Member member = memberUtil.getMember();
+
         Answer answer = Answer.builder()
                 .questionAndAnswer(answerData)
-                .studentNo(memberUtil.getStudentNo())
+                .studentNo(member.getStdntNo())
                 .testType(PsychologicalTestType.valueOf(form.getTestType()))
                 .testDate(LocalDateTime.now())
                 .build();

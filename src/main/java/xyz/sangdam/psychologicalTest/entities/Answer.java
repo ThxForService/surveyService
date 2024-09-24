@@ -1,8 +1,10 @@
 package xyz.sangdam.psychologicalTest.entities;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import xyz.sangdam.psychologicalTest.constants.PsychologicalTestType;
 
 import java.time.LocalDateTime;
@@ -11,10 +13,11 @@ import java.util.Map;
 @Data
 @Entity
 @Builder
+@NoArgsConstructor @AllArgsConstructor
 public class Answer {
 
     @Id
-    @Column(length = 10)
+    @GeneratedValue
     private Long resultId; // 검사 결과 일련번호
 
     @Column(name="stdntNo", length = 10)
