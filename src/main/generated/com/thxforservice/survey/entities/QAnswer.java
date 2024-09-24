@@ -31,6 +31,8 @@ public class QAnswer extends EntityPathBase<Answer> {
 
     public final EnumPath<com.thxforservice.survey.constants.SurveyType> testType = createEnum("testType", com.thxforservice.survey.constants.SurveyType.class);
 
+    public final StringPath userName = createString("userName");
+
     public QAnswer(String variable) {
         super(Answer.class, forVariable(variable));
     }
