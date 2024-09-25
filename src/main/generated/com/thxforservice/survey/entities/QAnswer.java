@@ -19,7 +19,18 @@ public class QAnswer extends EntityPathBase<Answer> {
 
     public static final QAnswer answer = new QAnswer("answer");
 
+    public final com.thxforservice.global.entities.QBaseEntity _super = new com.thxforservice.global.entities.QBaseEntity(this);
+
+    //inherited
+    public final DateTimePath<java.time.LocalDateTime> createdAt = _super.createdAt;
+
+    //inherited
+    public final DateTimePath<java.time.LocalDateTime> deletedAt = _super.deletedAt;
+
     public final StringPath email = createString("email");
+
+    //inherited
+    public final DateTimePath<java.time.LocalDateTime> modifiedAt = _super.modifiedAt;
 
     public final StringPath questionAndAnswer = createString("questionAndAnswer");
 
@@ -31,7 +42,7 @@ public class QAnswer extends EntityPathBase<Answer> {
 
     public final EnumPath<com.thxforservice.survey.constants.SurveyType> testType = createEnum("testType", com.thxforservice.survey.constants.SurveyType.class);
 
-    public final StringPath userName = createString("userName");
+    public final StringPath username = createString("username");
 
     public QAnswer(String variable) {
         super(Answer.class, forVariable(variable));

@@ -3,10 +3,6 @@ package com.thxforservice.member.entities;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.thxforservice.member.constants.Authority;
 import com.thxforservice.member.constants.Status;
-import jakarta.persistence.Column;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
-import com.thxforservice.member.constants.Authority;
 import lombok.Data;
 
 @Data
@@ -21,7 +17,7 @@ public class Member {
 
     private String password;
 
-   private String userName;
+   private String username;
 
     private String mobile;
 

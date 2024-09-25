@@ -2,6 +2,7 @@ package com.thxforservice.survey.services;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.thxforservice.member.entities.Member;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -33,9 +34,11 @@ public class AnswerSaveService {
             throw new RuntimeException(e);
         }
 
+        Member member = memberUtil.getMember();
         Answer answer = Answer.builder()
                 .questionAndAnswer(answerData)
-                .email(memberUtil.getMember().getEmail())
+                .email(member.getEmail())
+                .username(member.getUsername())
                 .testType(SurveyType.valueOf(form.getTestType()))
                 .testDate(LocalDateTime.now())
                 .build();
