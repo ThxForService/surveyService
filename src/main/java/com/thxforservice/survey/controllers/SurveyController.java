@@ -57,20 +57,21 @@ public class SurveyController {
     @ApiResponse(responseCode = "201", description = "답변 저장 성공")
     @ApiResponse(responseCode = "400", description = "잘못된 요청")
     @PostMapping("/answer")
-    public ResponseEntity<Void> saveTestAnswers(
+    public ResponseEntity<JSONData> saveTestAnswers(
             @Valid @RequestBody RequestAnswer answer, Errors errors) {
 
         if (errors.hasErrors()) {
             throw new BadRequestException(utils.getErrorMessages(errors));
         }
 
-        try {
-            saveService.save(answer);
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
+        JSONData data = new JSONData();
+        Answer result = saveService.save(answer);
+        HttpStatus status = HttpStatus.CREATED;
 
-        return ResponseEntity.status(HttpStatus.CREATED).build();
+        data.setData(result);
+        data.setStatus(status);
+
+        return ResponseEntity.status(status).body(data);
     }
 
 

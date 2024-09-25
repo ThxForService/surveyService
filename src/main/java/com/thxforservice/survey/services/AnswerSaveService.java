@@ -24,7 +24,7 @@ public class AnswerSaveService {
     private final ObjectMapper om;
 
     @Transactional
-    public void save(RequestAnswer form)  {
+    public Answer save(RequestAnswer form)  {
         Map<Long, Integer> test = form.getAnswers();
 
         String answerData = null;
@@ -46,6 +46,8 @@ public class AnswerSaveService {
         calculateScore(answer, test);
 
         answerRepository.save(answer);
+
+        return answer;
     }
 
     public void calculateScore(Answer answer, Map<Long, Integer> questionAnswerMap) {

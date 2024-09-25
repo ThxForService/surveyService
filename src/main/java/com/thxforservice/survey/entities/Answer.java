@@ -20,7 +20,7 @@ public class Answer extends BaseEntity {
     @Id @GeneratedValue
     private Long resultId; // 검사 결과 일련번호
 
-    @Column(length = 10)
+    @Column(length = 80)
     private String email; //km 추가
 
     @Column(length=30)
