@@ -36,10 +36,14 @@ public class ResultInfoService {
     private final ObjectMapper om;
 
     public Answer get(Long resultId) {
-        Member member = memberUtil.getMember();
 
+        Member member = memberUtil.getMember();
         QAnswer answer = QAnswer.answer;
-        Answer item = answerRepository.findOne(answer.email.eq(member.getEmail()))
+        BooleanBuilder builder = new BooleanBuilder();
+        builder.and(answer.email.eq(member.getEmail()))
+                .and(answer.resultId.eq(resultId));
+
+        Answer item = answerRepository.findOne(builder)
                 .orElseThrow(AnswerNotFoundException::new);
 
         addInfo(item);
