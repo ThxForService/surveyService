@@ -21,7 +21,10 @@ public class Answer {
     private Long resultId; // 검사 결과 일련번호
 
     @Column(length = 10)
-    private String email;
+    private String email; //km 추가
+
+    @Column(length=30)
+    private String userName; //km 추가
 
     @Column(length = 10)
     private Long score; // 검사 점수
