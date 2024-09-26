@@ -28,3 +28,89 @@ COMPULSION||나는 소독약을 많이 쓰는 편이다.
 COMPULSION||일들을 반복해서 확인하느라고 매일 많은 시간을 허비한다.
 COMPULSION||저녁에 옷을 건다거나 개어놓느라고 많은 시간을 쓰는 편이다.
 COMPULSION||어떤 일을 매우 주의 깊게 했어도 그것이 아주 잘 되지 않았다는 생각이 들곤 한다.
+EVASION||익숙치 않은 대인관계 상황에서도 편안함을 느낀다.
+EVASION||사교적이어야 하는 자리는 피한다.
+EVASION||낯선 사람들과 함께 있을 때 쉽게 마음을 편안하게 가질 수 있다.
+EVASION||특별한 사람을 피하고 싶은 생각은 없다.
+EVASION||사교적인 모임에서 나는 자주 당황함을 느낀다.
+EVASION||사교적인 모임에서 대개는 편안함을 느낀다.
+EVASION||이성에게 말을 걸 때 대체로 마음이 편하다.
+EVASION||사람들과 잘 알지 못하면 그들에게 말을 거는 것을 피하려 한다.
+EVASION||새로운 사람과 만날 기회가 오면 자주 거기에 응한다.
+EVASION||남녀가 같이 있는 일상적인 모임에서 자주 신경이 예민해지고 긴장된다.
+EVASION||잘 모르는 사람들과 같이 있을 때 대체로 신경이 예민해진다.
+EVASION||많은 사람들과 같이 있을 때 보통 편안함을 느낀다.
+EVASION||나는 자주 사람들로부터 멀리 떨어져 있고 싶어한다.
+EVASION||모르는 사람들 속에 있으면 보통 마음이 편치 않다.
+EVASION||사람들을 처음 만날 때 대체로 편안함을 느낀다.
+EVASION||사람들에게 소개될 때면 나는 긴장하고 마음을 졸인다.
+EVASION||방에 낯선 사람이 꽉 차있을 때도 나는 거리낌없이 들어간다.
+EVASION||여러 사람이 모여있는데 다가가서 어울리는 것을 피한다.
+EVASION||윗사람이 나와 이야기 하는 것을 원하면 나는 기꺼이 이야기 한다.
+EVASION||많은 사람들과 있으면 나는 자주 마음이 불편해진다.
+EVASION||사람들을 피하려는 경향이 있다.
+EVASION||많은 사람들과 함께 있으면 좀처럼 편안한 마음을 가지기 힘들다.
+EVASION||사교적인 약속을 피하려고 자주 핑계를 생각해 낸다.
+EVASION||나는 때때로 사람들을 서로 소개시켜주는 책임을 맡는다.
+EVASION||사교적인 약속이면 그것이 무엇이든 대개 지키는 편이다.
+EVASION||다른 사람들과 함께 있을 때 쉽게 편안해 진다.
+EVASION||파티나 친목회에서 사람들에게 말을 건네는 것을 꺼리지 않는다.
+EVASION||공식적인 사교상의 일은 피하려고 한다.
+EATING_DISORDER||살찌는 것이 두렵다.
+EATING_DISORDER||배가 고파도 식사를 하지 않는다.
+EATING_DISORDER||나는 음식에 집착하고 있다.
+EATING_DISORDER||억제할 수 없이 폭식 한 적이 있다.
+EATING_DISORDER||음식을 작은 조각으로 나누어 먹는다.
+EATING_DISORDER||자신이 먹고 있는 음식의 영양분과 열량을 알고 먹는다.
+EATING_DISORDER||빵이나 감자 같은 탄수화물이 많은 음식은 특히 피한다.
+EATING_DISORDER||내가 많은 음식을 먹으면 다른 사람들이 좋아하는 것 같다.
+EATING_DISORDER||먹고 난 다음 토한다.
+EATING_DISORDER||먹고 난 다음 심한 죄책감을 느낀다.
+EATING_DISORDER||자신이 좀 더 날씬해져야겠다는 생각을 떨쳐버릴 수가 없다.
+EATING_DISORDER||운동을 할 때 운동으로 인해 없어질 열량에 대해 계산하거나 생각한다.
+EATING_DISORDER||남들이 내가 너무 말랐다고 생각한다.
+EATING_DISORDER||내가 살이 쪘다는 생각을 떨쳐버릴 수가 없다.
+EATING_DISORDER||식사시간이 다른 사람보다 더 길다.
+EATING_DISORDER||설탕이 든 음식은 피한다.
+EATING_DISORDER||체중조절을 위해 다이어트용 음식을 먹는다.
+EATING_DISORDER||음식이 나의 인생을 지배한다는 생각이 든다.
+EATING_DISORDER||음식에 대한 자신의 조절능력을 과시한다.
+EATING_DISORDER||다른 사람들이 나에게 음식을 먹도록 강요하는 것 같다.
+EATING_DISORDER||음식에 대해 많은 시간과 정력을 투자한다.
+EATING_DISORDER||단 음식을 먹고 나면 마음이 편치 않다.
+EATING_DISORDER||체중을 줄이기 위해 운동이나 다른 것을 하고 있다.
+EATING_DISORDER||위가 비어 있는 느낌이 있다.
+EATING_DISORDER||새로운 기름진 음식 먹는 것을 즐긴다.
+EATING_DISORDER||식사 후 토하고 싶은 충동을 느낀다.
+STRESS||쉽게 짜증이 나고 기분의 변동이 심하다
+STRESS||피부가 거칠고 각종 피부질환이 심해졌다
+STRESS||온몸의 근육이 긴장되고 여기저기 쑤시다
+STRESS||잠을 잘 못 들거나 깊은 잠을 못 자고 자주 잠에서 깬다
+STRESS||매사에 자신이 없고 자기비하를 많이 한다
+STRESS||별다른 이유 없이 불안 초조하다.
+STRESS||쉽게 피로감을 느낀다.
+STRESS||매사에 집중이 잘 안되고 일(학습)의 능률이 떨어진다.
+STRESS||음식을 보면 먹고 싶은 충동을 참지 못한다.
+STRESS||식욕이 없어 잘 안 먹거나 갑자기 폭식한다.
+STRESS||기억력이 나빠져 잘 잊어버린다.
+INTERNET_ADDICTION||인터넷이 없다면 내 인생에 재미있는 일이 하나도 없을 것 같다.
+INTERNET_ADDICTION||실제 생활에서도 인터넷에서 하는 것처럼 해보고 싶다.
+INTERNET_ADDICTION||인터넷을 하지 못하면 무슨 일이 일어났는지 궁금해서 다른 일을 할 수가 없다.
+INTERNET_ADDICTION||사이버 세상과 현실이 혼동될 때가 있다.
+INTERNET_ADDICTION||인터넷을 할 때 마음대로 되지 않으면 짜증이 난다.
+INTERNET_ADDICTION||인터넷을 하지 못하면 안절부절 못하고 초조해진다.
+INTERNET_ADDICTION||인터넷을 하는 동안 더욱 자신감이 생긴다.
+INTERNET_ADDICTION||일상에서 골치 아픈 생각을 잊기 위해 인터넷을 하게 된다.
+INTERNET_ADDICTION||인터넷을 하면 기분이 좋아지고 쉽게 흥분한다.
+INTERNET_ADDICTION||인터넷을 하면 스트레스가 해소되는 것 같다.
+INTERNET_ADDICTION||“그만 해야지”하면서도 번번이 인터넷을 계속하게 된다.
+INTERNET_ADDICTION||일상 대화도 인터넷과 관련되어 있다.
+INTERNET_ADDICTION||해야 할 일을 시작하기 전에 인터넷부터 하게 된다.
+INTERNET_ADDICTION||일단 인터넷을 시작하면 처음에 마음먹었던 것보다 오랜 시간 인터넷을 하게 된다.
+INTERNET_ADDICTION||인터넷 속도가 느려지면 금방 답답하고 못 견딜 것 같은 기분이 든다.
+INTERNET_ADDICTION||인터넷을 하느라 다른 활동이나 TV에 대한 흥미가 감소했다.
+INTERNET_ADDICTION||인터넷을 하면서도 죄책감을 느낄 때가 있다.
+INTERNET_ADDICTION||지나치게 인터넷에 몰두해 있는 나 자신이 한심하게 느껴질 때가 있다.
+INTERNET_ADDICTION||인터넷 사용을 줄여야 한다는 생각을 끊임없이 한다.
+INTERNET_ADDICTION||내가 생각해도 나는 인터넷에 중독된 것 같다.
+
