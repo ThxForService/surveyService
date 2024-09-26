@@ -26,7 +26,7 @@ public class DataTransfer {
     @Test
     void tranfer() throws Exception {
         Resource resource = resourceLoader.getResource("classpath:static/files/survey.txt");
-        //int EVASION = 0, STRESS = 0, INTERNET_ADDICTION = 0, EATING_DISORDER = 0;
+       // int COMPULSION =0, EVASION = 0, STRESS = 0, INTERNET_ADDICTION = 0, EATING_DISORDER = 0;
         try (InputStream inputStream = resource.getInputStream();
              Scanner sc = new Scanner(inputStream, StandardCharsets.UTF_8)) {
 
